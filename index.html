@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Form Submission</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    form {
+      display: flex;
+      flex-direction: row;
+      margin: 10px;
+      padding: 10px;
+      background-color: rgb(215, 234, 250);
+      font-size: 18px;
+    }
+
+    label {
+      margin-top: 10px;
+      margin: 0 10px 0 10px;
+    }
+
+    button {
+      margin: 0 10px 0 10px;
+      background-color:rgb(69, 69, 255);
+      color: #fff;
+      border: none;
+      font-size: 15px;
+    }
+
+    .movie {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .movie-title {
+      margin-right: 10px;
+    }
+
+    .sort-buttons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sort-button {
+        background-color: rgb(215, 234, 250);
+        color: #000;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+    <h1>My Favorite Movies</h1>
+
+    <form>
+      <label for="title-input">Title:</label>
+      <input id="title-input" type="text" minlength="2" required>
+  
+      <label for="rating-input">Rating:</label>
+      <input id="rating-input" type="number" min="0" max="10" required>
+  
+      <button id="submit-button">Submit</button>
+    </form>
+  
+    <div class="sort-buttons">
+      <button class="sort-button" data-sort-by="title-asc">Sort by Title (A-Z)</button>
+      <button class="sort-button" data-sort-by="title-desc">Sort by Title (Z-A)</button>
+      <button class="sort-button" data-sort-by="rating-asc">Sort by Rating (Lowest to Highest)</button>
+      <button class="sort-button" data-sort-by="rating-desc">Sort by Rating (Highest to Lowest)</button>
+    </div>
+  
+    <div id="movie-list">
+    </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
